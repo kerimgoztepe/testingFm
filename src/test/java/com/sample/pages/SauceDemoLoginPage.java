@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class SauceDemoLoginPage extends CommonPageElements{
 
-    @FindBy(id = "user-name")
+    @FindBy(xpath= "//input[@id='user-name']")
     public WebElement userName;
 
     @FindBy(id = "password")

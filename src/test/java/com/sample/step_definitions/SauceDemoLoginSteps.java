@@ -1,11 +1,16 @@
 package com.sample.step_definitions;
 
-import com.sample.pages.SauceDashBoardPage;
+
 import com.sample.pages.SauceDemoLoginPage;
 import com.sample.utilities.CommonSteps;
+
+import com.sample.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+
 import org.testng.Assert;
+
+import static org.junit.Assert.assertEquals;
 
 public class SauceDemoLoginSteps extends CommonSteps {
 
@@ -16,7 +21,8 @@ public class SauceDemoLoginSteps extends CommonSteps {
     public void user_logins_to_platform_with_and() {
 
         // LOGIN STEPS FOR saucedemo website
-        driver.get("https://www.saucedemo.com/");
+        //driver.get("https://www.saucedemo.com/");
+        Driver.get().get("https://www.saucedemo.com/");
         //  Login("standard_user", "standard_user");
 
         //loginPageSauceDemo.Login("standard_user","secret_sauce");
@@ -36,28 +42,26 @@ public class SauceDemoLoginSteps extends CommonSteps {
     }
 
 
-    @Then("the user should see inventory page")
-    public void the_user_should_see_inventory_page() {
+    @Then("user verifies title of the page")
+    //getting page title
+    public void userVerifiesTitleOfThePage() {
 
-        // LOGIN STEPS FOR saucedemo website
-        driver.get("https://www.saucedemo.com/");
-        //  Login("standard_user", "standard_user");
+        String actualTitle = driver.getTitle();
+        //String actual1 = Driver.get().getTitle(); same as above
+        String expectedTitle = "Most Reliable App & Cross Browser Testing Platform | BrowserStack";
 
-        //loginPageSauceDemo.Login("standard_user","secret_sauce");
-        sauceDemoLoginPage.userName.sendKeys("standard_user");
-        sauceDemoLoginPage.passWord.sendKeys("secret_sauce");
-        sauceDemoLoginPage.loginButton.click();
+        assertEquals(expectedTitle,actualTitle);
+        //assertTrue(driver.getTitle().contains("Title of Page"));
 
+        /*
+        driver.close();
         String ActualTitle = driver.getTitle();
         String ExpectedTitle = "Swag Labs";
         Assert.assertEquals(ExpectedTitle,ActualTitle);
 
-
-
-
-        // Write code here that turns the phrase above into concrete actions
+         */
 
     }
 
-
 }
+

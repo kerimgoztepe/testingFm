@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         dryRun = false,
         plugin = {"pretty"},
 
-        tags = "@test1"
+        tags = "@asserttest1"
 )
 public class CukesRunner {
 }

@@ -5,5 +5,4 @@ Feature: sample web site test
   @test1 @login
   Scenario: login test
     Given user logins to platform with username and password
-
     #Then the user should see inventory page
