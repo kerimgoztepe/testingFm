@@ -21,11 +21,11 @@ public class SauceDemoLoginSteps extends CommonSteps {
     public void user_logins_to_platform_with_and() {
 
         // LOGIN STEPS FOR saucedemo website
-        //driver.get("https://www.saucedemo.com/");
-        Driver.get().get("https://www.saucedemo.com/");
-        //  Login("standard_user", "standard_user");
+        driver.get("https://www.saucedemo.com/");
+        //Driver.get().get("https://www.saucedemo.com/");
+        //we can use also Driver.get().get method...
+        // Driver and driver...there two are defined in Driver class
 
-        //loginPageSauceDemo.Login("standard_user","secret_sauce");
         sauceDemoLoginPage.userName.sendKeys("standard_user");
         sauceDemoLoginPage.passWord.sendKeys("secret_sauce");
         sauceDemoLoginPage.loginButton.click();
@@ -49,7 +49,6 @@ public class SauceDemoLoginSteps extends CommonSteps {
         String actualTitle = driver.getTitle();
         //String actual1 = Driver.get().getTitle(); same as above
         String expectedTitle = "Most Reliable App & Cross Browser Testing Platform | BrowserStack";
-
         assertEquals(expectedTitle,actualTitle);
         //assertTrue(driver.getTitle().contains("Title of Page"));
 
