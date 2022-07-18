@@ -22,12 +22,12 @@ public class Hooks {
 //
 //    }
 //
-    @Before
-    public void start() {
-        Driver.setUp();
-    }
+   // @Before
+    //public void start() {
+     //   Driver.setUp();
+   // }
 
-    @After
+    //@After
     public void tearDown(Scenario scenario) {
         byte[] picture;
         if (scenario.isFailed()) {
@@ -41,9 +41,6 @@ public class Hooks {
         scenario.attach(picture, "image/png", scenario.getName());
         Driver.closeDriver();
     }
-
-
-
 
 
 

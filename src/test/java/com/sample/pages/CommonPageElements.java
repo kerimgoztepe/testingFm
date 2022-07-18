@@ -5,8 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 public abstract class CommonPageElements extends Driver {
+
     public CommonPageElements() {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(Driver.get(),this);
     }
 
     public void navigateTo(String menuOption){

@@ -9,10 +9,9 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/sample/step_definitions",
         dryRun = false,
-        tags = "@profile",
-        plugin = {"json:target/cucumber.json",
-                "html:target/cucumber-default-report",
-                "rerun:target/failed.txt"}
+        plugin = {"pretty"},
+
+        tags = "@asserttest1"
 )
 public class CukesRunner {
 }
