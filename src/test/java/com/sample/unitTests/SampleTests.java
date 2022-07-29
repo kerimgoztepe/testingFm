@@ -24,6 +24,7 @@ public class SampleTests {
         actions.moveToElement(element).build().perform();
         WebElement summerDress = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@title='Summer Dresses'])[2]")));
         summerDress.click();
+
         List<WebElement> addToChart = driver.findElements(By.xpath("//span[text()='Add to cart']"));
         addToChart.get(0).click();
         Thread.sleep(10);
