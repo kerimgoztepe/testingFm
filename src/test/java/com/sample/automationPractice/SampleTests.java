@@ -1,7 +1,6 @@
-package com.sample.unitTests;
+package com.sample.automationPractice;
 
 import com.sample.utilities.Driver;
-import io.cucumber.java.en_old.Ac;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;

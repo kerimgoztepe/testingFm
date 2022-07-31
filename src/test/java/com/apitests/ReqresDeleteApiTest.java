@@ -3,12 +3,15 @@ package com.apitests;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 
+import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
 
 public class ReqresDeleteApiTest {
 
-   String baseURL = "https://reqres.in/api";
+    String baseURL = "https://reqres.in/api";
 
     @Test
     public void deleteAllServicesApiTest() {

@@ -36,6 +36,20 @@ public class AuthApiTest {
         //return response.jsonPath().getString("access_token");
     }
 
+    @Test
+    public void getMyProfile() {
+        String token = "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJzdXBlcmFkbWluIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTY1OTM1MDUzOSwidXNlcklkIjoxLCJhdXRob3JpdGllcyI6WyJhc3NpZ25fdXNlcl9yb2xlcyIsIlJPTEVfU1VQRVJBRE1JTiIsInVwZGF0ZV91c2VyIiwidmlld191c2VyIiwiUk9MRV9VU0VSIl0sImp0aSI6ImY4Y2QzYTFjLTcxY2YtNDY5OC1iZDQxLTFjNDNkMjI2NjIzZSIsImNsaWVudF9pZCI6ImZyb250LXNlcnZpY2UifQ.SpMryYEbfrlodkKtTMqR6_RNmox8Vg6DsiitO4LOBgQ";
+        Response response = given().auth().basic(CLIENT_ID,CLIENT_PASSWORD).
+                auth().oauth2(token).
+                baseUri(BASE_URL).
+                when().
+                get("/api/v1/account/me/profile");
+        response.then().log().ifError();
+        System.out.println(response.prettyPrint());
+        //return response;
+    }
+
+
 
 }
 

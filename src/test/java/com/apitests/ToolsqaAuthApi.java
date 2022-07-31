@@ -16,7 +16,7 @@ public class ToolsqaAuthApi {
         ResponseBody body = res.body();
         //Converting the response body to string
         String testApi = body.asString();
-        System.out.println("Data from the GET API- "+ testApi);
+        System.out.println("Here is data from the GET API- "+ testApi);
 
     }
 }
