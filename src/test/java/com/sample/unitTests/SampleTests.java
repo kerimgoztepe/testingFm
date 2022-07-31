@@ -1,9 +1,8 @@
 package com.sample.unitTests;
 
 import com.sample.utilities.Driver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import io.cucumber.java.en_old.Ac;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -38,6 +37,32 @@ public class SampleTests {
         Assert.assertTrue(wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Sign in']"))).isDisplayed());
 
         driver.close();
+
+
+    }
+
+    @Test
+    public void testLogin() {
+
+        Driver.get().get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+
+        //Test123++
+        WebElement userName = Driver.get().findElement(By.id("email"));
+        userName.sendKeys("advancedscientificw@gmail.com");
+
+        WebElement passWord = Driver.get().findElement(By.name("passwd"));
+        passWord.sendKeys("Test123++");
+
+        WebElement signIn = Driver.get().findElement(By.xpath("//span[normalize-space()='Sign in']"));
+        signIn.click();
+
+        String ActualTitle = Driver.get().getTitle();
+        String ExpectedTitle = "My account - My Store";
+
+        Assert.assertEquals(ActualTitle,ExpectedTitle);
+
+        //Assert.assertNotEquals(ActualTitle, ExpectedTitle);
+        System.out.println(ActualTitle);
 
 
     }
