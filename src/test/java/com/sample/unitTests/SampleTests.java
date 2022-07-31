@@ -17,10 +17,13 @@ public class SampleTests {
     @Test
     public void test1() throws InterruptedException {
         Driver.get().get("http://automationpractice.com/index.php");
+
         WebDriverWait wait = new WebDriverWait(driver,10);
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@title='Dresses'])[2]")));
+
         Actions actions = new Actions(driver);
         actions.moveToElement(element).build().perform();
+
         WebElement summerDress = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@title='Summer Dresses'])[2]")));
         summerDress.click();
 
@@ -46,7 +49,6 @@ public class SampleTests {
 
         Driver.get().get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
 
-        //Test123++
         WebElement userName = Driver.get().findElement(By.id("email"));
         userName.sendKeys("advancedscientificw@gmail.com");
 
@@ -62,7 +64,9 @@ public class SampleTests {
         Assert.assertEquals(ActualTitle,ExpectedTitle);
 
         //Assert.assertNotEquals(ActualTitle, ExpectedTitle);
-        System.out.println(ActualTitle);
+        System.out.println("Title of the page is = " + ActualTitle);
+
+        Driver.get().close();
 
 
     }
