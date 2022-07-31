@@ -11,7 +11,7 @@ interface Animal {
 
 }
 
-// Pig "implements" the Animal interface
+// Cat "implements" the Animal interface
 class Cat implements Animal {
     public void animalSound() {
         // The body of animalSound() is provided here

@@ -15,6 +15,7 @@ public class Constructor {
             Constructor obj2= new Constructor();
 
             System.out.println("name is = "+obj1.name+"| age is "+obj1.age);
+            System.out.println("name is = "+obj2.name+"| age is "+obj2.age);
 
 
         }
