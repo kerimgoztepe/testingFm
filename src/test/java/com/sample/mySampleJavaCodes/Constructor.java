@@ -1,6 +1,4 @@
-package com.sample.MySampleJavaCodes;
-
-import org.apache.commons.lang3.builder.ToStringExclude;
+package com.sample.mySampleJavaCodes;
 
 public class Constructor {
 

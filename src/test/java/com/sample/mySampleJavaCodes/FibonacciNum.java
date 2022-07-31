@@ -1,4 +1,4 @@
-package com.sample.MySampleJavaCodes;
+package com.sample.mySampleJavaCodes;
 
 public class FibonacciNum {
     public static void main(String[] args) {

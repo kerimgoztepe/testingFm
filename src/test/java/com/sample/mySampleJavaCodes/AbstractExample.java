@@ -1,4 +1,4 @@
-package com.sample.MySampleJavaCodes;
+package com.sample.mySampleJavaCodes;
 
     // Abstract class
     abstract class Animal1 {
@@ -7,22 +7,22 @@ package com.sample.MySampleJavaCodes;
 
         // Regular method
         public void sleep() {
-            System.out.println("Zzz");
+            System.out.println(" Zzzz Zzz");
         }
     }
 
 // Subclass (inherit from Animal)
-class Pig extends Animal1 {
+class Dog extends Animal1 {
     public void animalSound() {
         // The body of animalSound() is provided here
-        System.out.println("The pig says: wee wee");
+        System.out.println("The dog says: woof woof");
     }
 
 
     public static void main(String[] args) {
-        Pig myPig = new Pig(); // Create a Pig object
-        myPig.animalSound();
-        myPig.sleep();
+       Dog myDog = new Dog(); // Create a Pig object
+        myDog.animalSound();
+        myDog.sleep();
     }
 }
 
