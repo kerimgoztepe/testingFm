@@ -5,6 +5,8 @@ package com.sample.mySampleJavaCodes;
         // Abstract method (does not have a body)
         public abstract void animalSound();
 
+
+
         // Regular method
         public void sleep() {
             System.out.println(" Zzzz Zzz");
@@ -20,7 +22,7 @@ class Dog extends Animal1 {
 
 
     public static void main(String[] args) {
-       Dog myDog = new Dog(); // Create a Pig object
+       Dog myDog = new Dog(); // Create Dog object
         myDog.animalSound();
         myDog.sleep();
     }
