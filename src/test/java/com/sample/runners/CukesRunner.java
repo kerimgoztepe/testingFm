@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         dryRun = false,
         plugin = {"pretty"},
 
-        tags = "@AP1"
+        tags = "@bbcLogin"
 )
 public class CukesRunner {
 }

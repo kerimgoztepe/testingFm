@@ -7,7 +7,7 @@ public class Constructor {
         // below const. example
         Constructor(){
             this.name="John Berger";
-            this.age=30;
+            this.age=32;
         }
 
         public static void main(String[] args) {
