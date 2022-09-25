@@ -28,6 +28,7 @@ public class SampleTests {
 
         List<WebElement> addToChart = driver.findElements(By.xpath("//span[text()='Add to cart']"));
         addToChart.get(0).click();
+        System.out.println(addToChart);
         Thread.sleep(10);
 
         WebElement proceedToCheckOut = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Proceed to checkout']")));
@@ -73,6 +74,7 @@ public class SampleTests {
     @Test
     public void epicLoginTest() {
         Driver.get().get("https://app.epicflow.io/login");
+        driver.manage().window().maximize();
         WebElement userName = driver.findElement(By.id("email"));
         userName.sendKeys("kerimgoztepe@gmail.com");
         WebElement passWord = driver.findElement(By.id("password"));
@@ -81,6 +83,13 @@ public class SampleTests {
         loginButton.click();
         String title = driver.getTitle().toLowerCase();
         System.out.println(title);
+        String ActualTitle = Driver.get().getTitle();
+        String ExpectedTitle = "React App";
+
+        Assert.assertEquals(ActualTitle,ExpectedTitle);
+
+        driver.close();
+
 
     }
 
