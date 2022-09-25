@@ -2,6 +2,7 @@ package com.sample.automationPractice;
 
 import com.sample.utilities.Driver;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -87,6 +88,8 @@ public class SampleTests {
         String ExpectedTitle = "React App";
 
         Assert.assertEquals(ActualTitle,ExpectedTitle);
+        int x= title.length();
+        System.out.println(x);
 
         driver.close();
 
