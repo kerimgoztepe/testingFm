@@ -70,4 +70,18 @@ public class SampleTests {
 
     }
 
+    @Test
+    public void epicLoginTest() {
+        Driver.get().get("https://app.epicflow.io/login");
+        WebElement userName = driver.findElement(By.id("email"));
+        userName.sendKeys("kerimgoztepe@gmail.com");
+        WebElement passWord = driver.findElement(By.id("password"));
+        passWord.sendKeys("K@rim5568a2");
+        WebElement loginButton = driver.findElement(By.xpath("//button[@title='Login']"));
+        loginButton.click();
+        String title = driver.getTitle().toLowerCase();
+        System.out.println(title);
+
+    }
+
 }
