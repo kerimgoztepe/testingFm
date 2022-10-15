@@ -46,6 +46,7 @@ public class AuthApiTest {
                 get("/api/v1/account/me/profile");
         response.then().log().ifError();
         System.out.println(response.prettyPrint());
+
         //return response;
     }
 

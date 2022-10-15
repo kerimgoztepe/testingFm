@@ -25,4 +25,6 @@ public class ReqresDeleteApiTest {
         response.then().statusCode(204);
         response.prettyPrint();
     }
+
+
 }
