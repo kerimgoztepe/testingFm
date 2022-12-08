@@ -3,7 +3,7 @@ package com.sample.mySampleJavaCodes;
 import java.util.Calendar;
 import java.util.Date;
 
-public class GetDate() {
+public class GetDate {
 
 
     public static Date main(String[] args) {
