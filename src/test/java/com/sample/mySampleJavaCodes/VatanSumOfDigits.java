@@ -1,5 +1,7 @@
 package com.sample.mySampleJavaCodes;
 
+import org.junit.Test;
+
 public class VatanSumOfDigits {
 
     public static void main(String[] args) {
@@ -12,5 +14,7 @@ public class VatanSumOfDigits {
         System.out.println("sum = " +sum);
 
     }
+
+
 
 }

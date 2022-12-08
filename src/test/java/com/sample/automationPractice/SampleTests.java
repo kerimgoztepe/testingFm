@@ -1,6 +1,7 @@
 package com.sample.automationPractice;
 
 import com.sample.utilities.Driver;
+import org.apache.groovy.util.SystemUtil;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
@@ -9,6 +10,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.*;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import static com.sample.utilities.Driver.driver;
@@ -95,6 +102,24 @@ public class SampleTests {
 
 
     }
+
+    @Test
+    private static Date getDayBeginTime(Date date) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.set(Calendar.HOUR, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        return new Date(calendar.getTime().getTime());
+    }
+
+
+
+
+
+
+
 
 
 }
