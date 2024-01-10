@@ -32,7 +32,7 @@ public class Coinmarketcap {
         paratmers.add(new BasicNameValuePair("convert", "USD"));
 
         try {
-            String result = makeAPICall(uri, paratmers);
+            String result = makeAPICall(uri, paratmers); //test
             System.out.println(result);
         } catch (IOException e) {
             System.out.println("Error: cannont access content - " + e.toString());
