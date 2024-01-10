@@ -1,4 +1,4 @@
-Feature: SimpleCalc functionality
+Feature: SimpleCalc functionality test
 
   Scenario: Adding two integers
     Given I have two integers 4 and 1
